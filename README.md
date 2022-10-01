@@ -35,3 +35,7 @@
 
 #### 9. Sector Rotation with reverse momentum Investment Strategy
 [code] https://github.com/QuhiQuhihi/asset_allocation_strategy/blob/main/08_sector_rotation_with_reverse_momentum.ipynb
+
+### Environment
+Use python 3.8.10
+Download from Anaconda.org
