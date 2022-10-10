@@ -6,7 +6,7 @@ from backtest.target_generator import TargetGenerator
 
 
 custom_universe=[
-'VTI', # Vanguard Total Stock Market ETF 2001-05-24
+'IVV', # iShares Core S&P 500 ETF 2000-05-15
 'AGG', # iShares Core U.S. Aggregate Bond ETF # 2003-09-22
 ]
 
@@ -24,7 +24,7 @@ class _60_40_allocation(TargetGenerator):
             target_weight(dict)
         """
         target_weight = {}
-        target_weight['VTI'] = 0.60
+        target_weight['IVV'] = 0.60
         target_weight['AGG'] = 0.40
 
         
