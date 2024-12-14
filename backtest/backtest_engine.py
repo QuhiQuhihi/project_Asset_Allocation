@@ -183,7 +183,7 @@ class BacktestEngine():
             df_add = yf.Ticker(ticker).history(period='max')
             df_add.index.rename('date', inplace=True)
             df_add.columns = ['openadj', 'highadj', 'lowadj', 'closeadj', 
-                'volume', 'dividends', 'stock splits']
+                'volume', 'dividends', 'stock splits',  'capital gains']
             df_add['ticker'] = [ticker for _ in df_add.index]
             df = pd.concat([df, df_add],axis=0)
             
