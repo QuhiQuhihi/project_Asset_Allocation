@@ -1,0 +1,3 @@
+# Next experiment — explicitly not run
+
+The HRP-minus-risk-scaled-EQ ratio interval includes zero despite a positive point estimate. Next, collect an untouched later period using the unchanged rules, add observed cash yields, and investigate whether the large SHY allocation explains the result. Required inputs: permitted snapshots with vintage history, instrument distributions, executable spread/size assumptions and an ex-ante universe. Do not choose the best lookback from this study's sensitivity table. A separate VAA/DAA replication requires the original universes and validated definitions; it is not claimed done here.

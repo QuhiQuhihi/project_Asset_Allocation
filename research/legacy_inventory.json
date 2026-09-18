@@ -1,0 +1,282 @@
+[
+  {
+    "path": "00_mean_variance.ipynb",
+    "sha256": "01c2decaf1d7b42913e80289ded9e369ae3ef5056cd1a493cb87e7d3fe6ed9c0",
+    "disposition": "Superseded notebook: original on old; saved results withdrawn from maintained evidence."
+  },
+  {
+    "path": "01_risk_parity.ipynb",
+    "sha256": "524bf379ce7b9d9d8823ab2efdef2b35631aed63c92b0572a74d070986d1d7cf",
+    "disposition": "Superseded notebook: original on old; saved results withdrawn from maintained evidence."
+  },
+  {
+    "path": "02_hierachical_risk_parity.ipynb",
+    "sha256": "df5295d89362eb25533393aa2bfd7fd3f7fed9686ca554fe9d2e6f780386abd4",
+    "disposition": "Superseded notebook: original on old; saved results withdrawn from maintained evidence."
+  },
+  {
+    "path": "03_kelly_criteriom.ipynb",
+    "sha256": "0fc5d55f64311c8d7a09690b392ca121be27457de06c419588b33729a773ea1f",
+    "disposition": "Superseded notebook: original on old; saved results withdrawn from maintained evidence."
+  },
+  {
+    "path": "04_max_diversification.ipynb",
+    "sha256": "c67044ac9f2f9017c2a9627a2e6cd40dfdcb48b5d4e032e53e56afaf386322c4",
+    "disposition": "Superseded notebook: original on old; saved results withdrawn from maintained evidence."
+  },
+  {
+    "path": "05_sector_rotation_with_momentum.ipynb",
+    "sha256": "4f3b34458ef44f82e01c74e087bd42225d1ec16d372c346a8e6cfb0fdd59610a",
+    "disposition": "Superseded notebook: original on old; saved results withdrawn from maintained evidence."
+  },
+  {
+    "path": "06_vigilant_asset_allocation_with_momentum.ipynb",
+    "sha256": "192b61a14c461f48cbd99040308c5024b805cc4c037e8e2c83db9651913a790f",
+    "disposition": "Superseded notebook: original on old; saved results withdrawn from maintained evidence."
+  },
+  {
+    "path": "07_defensive_asset_allocation_with_momentum_monthly.ipynb",
+    "sha256": "68b1a75410db59d93cd48a20ead2657cc49b1120c72b73ac3952d952ddf3f903",
+    "disposition": "Superseded notebook: original on old; saved results withdrawn from maintained evidence."
+  },
+  {
+    "path": "08_sector_rotation_with_reverse_momentum.ipynb",
+    "sha256": "368b9223f089870d043692e98d1de12107917b60e0a67f798e8cfcad56781b61",
+    "disposition": "Superseded notebook: original on old; saved results withdrawn from maintained evidence."
+  },
+  {
+    "path": "asset/image/EEM_2022-10-10_15-00-53.png",
+    "sha256": "e3e7df15484180b60ac4d96c7c80ed77f870771cc70a02cd06974eb22ab2fa8d",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "backtest/README.md",
+    "sha256": "2700152bb6ca982c94c803436f2a8cfa15e887945b5fef07925072734cea249e",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "backtest/advanced_manual.ipynb",
+    "sha256": "6b8f62e727021b6ed87e21ba79d609449c01bff8952a993952219031ff9c71de",
+    "disposition": "Superseded notebook: original on old; saved results withdrawn from maintained evidence."
+  },
+  {
+    "path": "backtest/backtest_engine.py",
+    "sha256": "7f7118ef763e801e1d9307f214fe54b1d320172860c43a0deb0b0bf2ef0fdbbd",
+    "disposition": "Superseded implementation: original on old; maintained workflow replaces hidden state and unvalidated assumptions."
+  },
+  {
+    "path": "backtest/target_generator.py",
+    "sha256": "a96685d04eca7801ff7b6d1fc7ee377da255becf748e27612eb4bfc3846a7fff",
+    "disposition": "Superseded implementation: original on old; maintained workflow replaces hidden state and unvalidated assumptions."
+  },
+  {
+    "path": "backtest/user_manual.ipynb",
+    "sha256": "152e829200348722449374233434ecdc98407a8f44db59d1fa4da72f41c93ece",
+    "disposition": "Superseded notebook: original on old; saved results withdrawn from maintained evidence."
+  },
+  {
+    "path": "benchmark_strategy/_30_70_allocation.py",
+    "sha256": "9d777a19952f5d3f0cf3c0ab59954a22196b522f5124c0ec2c36f650750d294b",
+    "disposition": "Superseded implementation: original on old; maintained workflow replaces hidden state and unvalidated assumptions."
+  },
+  {
+    "path": "benchmark_strategy/_40_60_allocation.py",
+    "sha256": "ac822e5284590d557b2d2552eac121f9657609ddc9bb92ad3f773ec0e0829d38",
+    "disposition": "Superseded implementation: original on old; maintained workflow replaces hidden state and unvalidated assumptions."
+  },
+  {
+    "path": "benchmark_strategy/_50_50_allocation.py",
+    "sha256": "5365464eb45c77d22257763011eb9a5b4d0d48e37c9d14277aaa273c9ba7fb38",
+    "disposition": "Superseded implementation: original on old; maintained workflow replaces hidden state and unvalidated assumptions."
+  },
+  {
+    "path": "benchmark_strategy/_60_40_allocation.py",
+    "sha256": "0d31c83b410642d162a35c23fc707148f31a1aa1eb2d626b4e2b509fa94d5b93",
+    "disposition": "Superseded implementation: original on old; maintained workflow replaces hidden state and unvalidated assumptions."
+  },
+  {
+    "path": "benchmark_strategy/_70_30_allocation.py",
+    "sha256": "88fdda823c139883d14230672bb174e66c103c929e4bdbedb30a288470b04fe7",
+    "disposition": "Superseded implementation: original on old; maintained workflow replaces hidden state and unvalidated assumptions."
+  },
+  {
+    "path": "benchmark_strategy/all_weather.py",
+    "sha256": "97c7009e9f6619eba2268ffd4dec9708480a114b30d2576498cd0bb35780a8fa",
+    "disposition": "Superseded implementation: original on old; maintained workflow replaces hidden state and unvalidated assumptions."
+  },
+  {
+    "path": "benchmark_strategy/equal_weight.py",
+    "sha256": "279432f7ff120418647078263066c0a4f240d0aa1da9a3a5d33af3d95b0ee263",
+    "disposition": "Superseded implementation: original on old; maintained workflow replaces hidden state and unvalidated assumptions."
+  },
+  {
+    "path": "benchmark_strategy/sap_only.py",
+    "sha256": "d600ebd7ad8c48f733eb0b568b3c34abacda82079d8f464ccbd87f800a679d9d",
+    "disposition": "Superseded implementation: original on old; maintained workflow replaces hidden state and unvalidated assumptions."
+  },
+  {
+    "path": "data/index_data.csv",
+    "sha256": "1177d4bffc68bd9a891456299a1f9fb88c1fe0da2b37adebb9a506ade4e0a114",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/Bloomberg Barclays EM AGG.xlsx",
+    "sha256": "e36f51be3d27962c82761cf1ecdeb9716d6c37911bcff6b73b7dbde39e82b6c5",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/Bloomberg Barclays Global AGG.xlsx",
+    "sha256": "8d278106dd1828a8ff058254f509c09775a3811e924f79e2ffe6dfd8852aee66",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/Bloomberg Barclays US 1-3 month treasury.xlsx",
+    "sha256": "a4f95a1a487833016672be4decc40089554236aa2c0d3ea56ba44f8043a4b677",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/Bloomberg Barclays US ABS.xlsx",
+    "sha256": "0fe1b5f9d3a60ac3df94d5d248f2260cc67ee39370a3fe950d3a5606c72f02e7",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/Bloomberg Barclays US AGG.xlsx",
+    "sha256": "1e1a5bfe00cf97bdcbb735d18835ef8f7d399527a00301de23d0fa289abc415b",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/Bloomberg Barclays US Corp HY.xlsx",
+    "sha256": "8dea29d7dc46fefec5e7c8bf269cab18547760b43029564d7144a67ab3865fec",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/Bloomberg Barclays US Corp IG.xlsx",
+    "sha256": "71d969db4e9653d4399051c391f9f8bbef1369b9d336123543186c1cae1d3a76",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/Bloomberg Barclays US Inflation Protected 7-10 year.xlsx",
+    "sha256": "b45c2e679065650ad91d4cae0d68655e0cb83ae076bc847ba4eb1d93aa394fa9",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/Bloomberg Barclays US Inflation Protected.xlsx",
+    "sha256": "b89aaa455010edf87edc71c2d763adfd247f5fa6aae7d809168a818381ecc895",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/Bloomberg Barclays US Long Gov credit.xlsx",
+    "sha256": "5dbc9c54f8c6c3f3d64c5ba8e0949ade8d7b23bb0243a9b6fcf02a728c2bf4d8",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/Bloomberg US 20+ Treasury.xlsx",
+    "sha256": "7df2b4bada8207371db1cd8a248b1882886e3f99b2b0acdedf5dc8a254e6efb0",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/Bloomberg US 7-10 Treasury.xlsx",
+    "sha256": "5207c4056d14d9d481b7cb57b9e4fd52591e1ea27d509e51933f9be4b819a6f0",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/ICE US 20+ TREASURY.xlsx",
+    "sha256": "71fd05201c7f369305b39422859913118dca0fdcd2faedfa2aafe9f46000a968",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/ICE US 7-10  TREASURY.xlsx",
+    "sha256": "4752b2445db7d0098d511d8cc758c98dae29c0719a8575419e87f489b4828b39",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/MSCI Emerging.xlsx",
+    "sha256": "5dad35b6c73aa206a098b54659577dabdca9721a3329e3ee880d9caad36d6622",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/MSCI World Gross.xlsx",
+    "sha256": "9a9b5fea9647a629e9b976aee1b3a77454d690ced371278e7fc37881bc7913e8",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/MSCI World Real Estate.xlsx",
+    "sha256": "f61c335dfb657488a127dc66335a172bb3593ce79a72c1ebc470138582644b5b",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/MSCI World Value.xlsx",
+    "sha256": "405318f76bf646f525c9959ea9a6c3184ad434bf45312551bd432dbf4f312308",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/MSCI World x US.xlsx",
+    "sha256": "da106ecf9b187609ab20e21eafb7377a95194adeba2bf99b0ced64f53ed7f708",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/MSCI World.xlsx",
+    "sha256": "bc50e8c924e5188c3d93457de4f62160491459e4aa7475c0edde2ac0b4f6b55d",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/MSCI_All Country World.xlsx",
+    "sha256": "3dad6276395012413f0c2c17207a7378fdad6455ad328dc9c1b8eeccbd7fe513",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/Russel 300 TR.xlsx",
+    "sha256": "7aaccdee54ebd1b32a9335186de4a387b45a169acc5f44dbf26bf676f3471179",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/SNP GSCI TR.xlsx",
+    "sha256": "e8e45b5ec62e7c15a4921bb96ec9e5120b27b6269997d8021249f0e9a0cf93af",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/SNP global infrastructure.xlsx",
+    "sha256": "73527e76618068ebb972e3d6243ca29d02e46b6c94f77a7e50f10a0a15fff89d",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/SNP metal and mining.xlsx",
+    "sha256": "691ffd5ab2dc0ab0642e409eaa32ed4a441dcced6487c3468aaa9191ac283116",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/SNP oil gas exploration and production.xlsx",
+    "sha256": "8182192f815b7331c1b368f542d910b63c7dd1e096cbe7f4f853cd55e8733e1e",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "data/index_data/historical_asset_return_daily.csv",
+    "sha256": "9c23b340dfa0cc6b1fc575b56613435117e367c56a699975668d80d504219237",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "requirements.txt",
+    "sha256": "4f13f055cadbe1c9e4a6b3ed5d275681089282a1abd75763048a916732e859e7",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "to_read/Breadth Momentum and Vigilant Asset Allocation (VAA) Winning More by Losing Less.pdf",
+    "sha256": "ff748a697ed0ee7f55e77a5fbea43c3ab4f12664c925436b5e459a963c8ba0e4",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "to_read/Breadth Momentum and the Canary Universe Defensive Asset Allocation (DAA).pdf",
+    "sha256": "fbd71d9a1b9b2e86c5f3ea46374e332566a004685ec93d1bad3b3b0032fdc9f0",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "to_read/Hierachical_risk_parity_MunichRe.pdf",
+    "sha256": "8763d936d300140cfafa43da4512affad462af71a233ffa9cfe0aabaef42548a",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  },
+  {
+    "path": "to_read/Relative-Strength-Strategies-for-Investing_Mebanne T Faber.pdf",
+    "sha256": "915fe641f8e500b0599d4191561adb4d2a18dc84985f5e8704826275fe5532d3",
+    "disposition": "Historical data/third-party asset: local recovery only; provenance or redistribution rights not established."
+  }
+]

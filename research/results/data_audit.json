@@ -1,0 +1,27 @@
+{
+  "price_rows": 2064,
+  "return_rows": 2063,
+  "first_price": "2018-07-02",
+  "last_price": "2026-09-17",
+  "missing": 0,
+  "duplicates": 0,
+  "max_abs_return": {
+    "SPY": 0.10942366940471693,
+    "IEMG": 0.12674100634100538,
+    "TLT": 0.07519578038464125,
+    "GLD": 0.10274245274560034,
+    "SHY": 0.00997401899157846,
+    "AGG": 0.040011069233264474
+  },
+  "returns_over_25pct": 0,
+  "unchanged_price_fraction": {
+    "SPY": 0.001454192922927775,
+    "IEMG": 0.006301502666020358,
+    "TLT": 0.00290838584585555,
+    "GLD": 0.0024236548715462916,
+    "SHY": 0.07270964614638875,
+    "AGG": 0.00872515753756665
+  },
+  "calendar": "XNYS",
+  "exclusions": "Only first undefined return; no missing observations filled or excluded."
+}
