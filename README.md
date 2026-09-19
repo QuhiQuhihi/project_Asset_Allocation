@@ -2,7 +2,7 @@
 
 A portfolio should have an economic reason to exist and remain useful when its estimated inputs are wrong. This project studies **robust asset allocation**: how to construct exposures, limit sensitivity to noisy estimates, and evaluate a strategy without mistaking repeated experimentation for investment skill.
 
-The research direction draws on **Marcos López de Prado's work on financial machine learning and backtest overfitting**, alongside portfolio theory and covariance estimation. The central idea is to examine the whole decision process: the universe, estimated risks, constraints, validation periods, attempted alternatives and implementation costs. HRP, shrinkage, purging and selection diagnostics address different failure modes; none makes a strategy immune to overfitting.
+The project examines the whole allocation decision: the universe, estimated risks, portfolio objectives, constraints, validation periods, attempted alternatives and implementation costs. The aim is to understand which choices remain defensible when inputs change or evidence weakens. Hierarchical allocation, shrinkage, purging and selection diagnostics address different failure modes; none makes a strategy immune to overfitting.
 
 ## Start with robust research design
 
@@ -16,21 +16,36 @@ Start with **estimation risk** to see how research choices become portfolio weig
 
 ## Explore the allocation ideas
 
-These nine chapters supply the portfolio objectives and investment rules that robust research must evaluate. Each introduces the economic mechanism and links to a worked notebook with explicit illustrative inputs. Read them as candidates to understand and challenge, rather than a menu of backtested winners.
+These fifteen chapters explore different jobs an allocation can perform: balance risk, incorporate investor views, limit tail losses, fund liabilities or change exposure through time. Each introduces the economic mechanism and links to a worked notebook with explicit illustrative inputs, numerical checks and limitations.
+
+### Portfolio objectives, views and economic risks
 
 | Topic | Research question and contents | Read | Explore |
 |---|---|---|---|
-| **1. Mean–variance allocation** | How does a return objective change the minimum-risk mix? Construct the efficient frontier and examine sensitivity to expected returns. | [Research note](topics/01-mean-variance/README.md) | [Notebook](topics/01-mean-variance/study.ipynb) |
-| **2. Risk parity** | Does equal capital mean equal risk? Compare equal weight, inverse volatility, and equal risk contribution using marginal portfolio risk. | [Research note](topics/02-risk-parity/README.md) | [Notebook](topics/02-risk-parity/study.ipynb) |
-| **3. Hierarchical risk parity** | Can correlation clusters organize diversification? Follow distance construction, a dendrogram, and recursive cluster allocation. | [Research note](topics/03-hierarchical-risk-parity/README.md) | [Notebook](topics/03-hierarchical-risk-parity/study.ipynb) |
-| **4. Kelly growth allocation** | How much capital should an estimated edge receive? Derive expected log growth and study fractional exposure when probabilities are uncertain. | [Research note](topics/04-kelly-growth/README.md) | [Notebook](topics/04-kelly-growth/study.ipynb) |
-| **5. Maximum diversification** | What changes when the objective is diversification rather than minimum variance? Compare the diversification ratio and resulting exposures. | [Research note](topics/05-maximum-diversification/README.md) | [Notebook](topics/05-maximum-diversification/study.ipynb) |
-| **6. Sector momentum** | Should recent sector leadership persist? Build a relative-strength ranking, a trend gate, and an explicit delayed decision. | [Research note](topics/06-sector-momentum/README.md) | [Notebook](topics/06-sector-momentum/study.ipynb) |
-| **7. Vigilant allocation** | Can weakening participation warn against risk? Combine weighted price momentum with breadth inside the risky universe. | [Research note](topics/07-vigilant-allocation/README.md) | [Notebook](topics/07-vigilant-allocation/study.ipynb) |
-| **8. Defensive allocation** | Can a separate warning universe guide the risk budget? Distinguish canary signals from asset selection and defensive holdings. | [Research note](topics/08-defensive-allocation/README.md) | [Notebook](topics/08-defensive-allocation/study.ipynb) |
-| **9. Sector reversal** | When might recent losers recover? Contrast a short-horizon contrarian ranking with momentum and consider turnover and persistent losses. | [Research note](topics/09-sector-reversal/README.md) | [Notebook](topics/09-sector-reversal/study.ipynb) |
+| **Mean–variance allocation** | How does a return objective change the minimum-risk mix? Construct the efficient frontier and examine sensitivity to expected returns. | [Research note](topics/01-mean-variance/README.md) | [Notebook](topics/01-mean-variance/study.ipynb) |
+| **Risk parity** | Does equal capital mean equal risk? Compare equal weight, inverse volatility, and equal risk contribution using marginal portfolio risk. | [Research note](topics/02-risk-parity/README.md) | [Notebook](topics/02-risk-parity/study.ipynb) |
+| **Hierarchical risk parity** | Can correlation clusters organize diversification? Follow distance construction, a dendrogram, and recursive cluster allocation. | [Research note](topics/03-hierarchical-risk-parity/README.md) | [Notebook](topics/03-hierarchical-risk-parity/study.ipynb) |
+| **Kelly growth allocation** | How much capital should an estimated edge receive? Derive expected log growth and study fractional exposure when probabilities are uncertain. | [Research note](topics/04-kelly-growth/README.md) | [Notebook](topics/04-kelly-growth/study.ipynb) |
+| **Maximum diversification** | What changes when the objective is diversification rather than minimum variance? Compare the diversification ratio and resulting exposures. | [Research note](topics/05-maximum-diversification/README.md) | [Notebook](topics/05-maximum-diversification/study.ipynb) |
+| **Black–Litterman allocation** | How should uncertain investor views change an existing allocation? Blend an equilibrium-implied prior with absolute and relative views, then examine confidence and portfolio constraints. | [Research note](topics/13-black-litterman/README.md) | [Notebook](topics/13-black-litterman/study.ipynb) |
+| **Expected-shortfall allocation** | What changes when the objective is the average loss in the worst tail? Solve a scenario CVaR portfolio and inspect sensitivity to tail assumptions. | [Research note](topics/14-expected-shortfall/README.md) | [Notebook](topics/14-expected-shortfall/study.ipynb) |
+| **Factor-risk allocation** | Do several assets really provide different risks? Map holdings to common factors, reconcile factor and residual risk, and allocate using explicit exposure objectives. | [Research note](topics/15-factor-risk-allocation/README.md) | [Notebook](topics/15-factor-risk-allocation/study.ipynb) |
+| **Liability-driven allocation** | Which assets fund a future obligation? Match liability value and interest-rate sensitivity, then examine surplus under parallel and nonparallel rate changes. | [Research note](topics/16-liability-driven-allocation/README.md) | [Notebook](topics/16-liability-driven-allocation/study.ipynb) |
 
-The first five chapters examine how objectives and dependence estimates determine weights. The four tactical chapters examine when signals should change asset selection or risk exposure. In each case ask which estimated quantity drives the decision, how that decision changes under plausible errors, and which simple allocation supplies a fair comparison.
+### Tactical exposure and capital protection
+
+| Topic | Research question and contents | Read | Explore |
+|---|---|---|---|
+| **Sector momentum** | Should recent sector leadership persist? Build a relative-strength ranking, a trend gate, and an explicit delayed decision. | [Research note](topics/06-sector-momentum/README.md) | [Notebook](topics/06-sector-momentum/study.ipynb) |
+| **Vigilant allocation** | Can weakening participation warn against risk? Combine weighted price momentum with breadth inside the risky universe. | [Research note](topics/07-vigilant-allocation/README.md) | [Notebook](topics/07-vigilant-allocation/study.ipynb) |
+| **Defensive allocation** | Can a separate warning universe guide the risk budget? Distinguish canary signals from asset selection and defensive holdings. | [Research note](topics/08-defensive-allocation/README.md) | [Notebook](topics/08-defensive-allocation/study.ipynb) |
+| **Sector reversal** | When might recent losers recover? Contrast a short-horizon contrarian ranking with momentum and consider turnover and persistent losses. | [Research note](topics/09-sector-reversal/README.md) | [Notebook](topics/09-sector-reversal/study.ipynb) |
+| **Volatility targeting** | How should the amount of risky exposure respond to an estimated risk budget? Scale a risky sleeve using prior information and examine forecast lag, cash, costs and realized risk. | [Research note](topics/17-volatility-targeting/README.md) | [Notebook](topics/17-volatility-targeting/study.ipynb) |
+| **CPPI portfolio insurance** | How does the distance above a wealth floor determine risky exposure? Follow the cushion and multiplier, then examine costs and a sudden price gap that breaches the floor. | [Research note](topics/18-cppi/README.md) | [Notebook](topics/18-cppi/study.ipynb) |
+
+For a first pass, compare **mean–variance → Black–Litterman → expected shortfall** to see how beliefs and the loss objective alter a portfolio. Follow **risk parity → HRP → factor risk** to distinguish capital diversification from economic risk. Read **liability-driven allocation → CPPI** to compare funding obligations with a dynamic wealth floor, and **momentum → volatility targeting** to separate an expected-return signal from an exposure rule.
+
+Every route returns to the same robust-research questions: which uncertain input drives the decision, what happens when that input is wrong, and which simple allocation supplies a fair comparison? The new chapters are mechanism studies, not additional winning backtests on the reused ETF history.
 
 ## A historical case for applying the discipline
 

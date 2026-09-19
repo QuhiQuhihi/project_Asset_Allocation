@@ -43,3 +43,17 @@ tolerances could admit an invalid covariance in extremely small return units. Va
 normalizes covariance magnitude before symmetry/semidefiniteness checks; tests reject the same
 invalid matrix across scales. Known analytic and exhaustive-grid solutions validate the actual
 optimization. This repair does not alter the historical ETF strategy engine.
+
+## Allocation breadth extension — 19 September 2026
+
+Starting from clean `renovation` commit `8363ed3070`, the user requested more allocation ideas
+at the same research quality. Six additions cover investor views, tail-loss objectives,
+factor exposures, liability funding, volatility budgets and cushion-based insurance. Each
+has a dedicated note and worked notebook; the overview now groups fifteen ideas by the
+allocation decision rather than placing them in a performance ranking. Three robustness
+chapters remain a separate reading path.
+
+The additions use original constructed inputs and independently checked mathematics. No
+legacy source is newly promoted, no additional current-market performance is inferred, and
+the original ETF protocol is retained with a dated scope amendment. Recovery and public
+file boundaries remain unchanged.

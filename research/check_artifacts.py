@@ -73,9 +73,18 @@ def public_checks():
     if not any("image/png" in o.get("data", {}) for c in code for o in c.get("outputs", [])):
         raise ValueError("No notebook figures")
     topics = sorted((ROOT / "topics").glob("*/study.ipynb"))
-    if len(topics) != 12:
-        raise ValueError("Expected nine allocation and three robustness topic notebooks")
+    if len(topics) != 18:
+        raise ValueError("Expected fifteen allocation and three robustness topic notebooks")
+    overview = (ROOT / "README.md").read_text()
     for path in topics:
+        note = path.with_name("README.md")
+        if not note.is_file():
+            raise ValueError("Missing topic research note: " + str(note.relative_to(ROOT)))
+        for entry in [path, note]:
+            if str(entry.relative_to(ROOT)) not in overview:
+                raise ValueError(
+                    "Topic missing from research overview: " + str(entry.relative_to(ROOT))
+                )
         topic = nbformat.read(path, as_version=4)
         nbformat.validate(topic)
         cells = [cell for cell in topic.cells if cell.cell_type == "code"]

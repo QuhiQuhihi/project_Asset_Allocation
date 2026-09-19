@@ -82,3 +82,38 @@ Successful notebooks replace prior files atomically; previews remain under ignor
 `research/preview/`. These examples require no new vendor data or dependencies. The existing
 September 17 adjusted-price vintage remains the separate historical input. No empirical DSR/PBO
 claim, full nested predictive allocation model or completed future holdout is asserted.
+
+## Allocation breadth extension — 19 September 2026
+
+Starting commit `8363ed3070`, clean working tree. The user requested additional allocation
+ideas with the existing level of research quality. Six chapters were added: Black–Litterman,
+expected shortfall, factor-risk allocation, liability-driven allocation, volatility targeting
+and CPPI. Each has an economic question, original constructed inputs, explicit portfolio rule,
+independent numerical checks, sensitivity/failure examples, source references and executed plots.
+
+Outputs: `topics/13-black-litterman/` through `topics/18-cppi/`, with reusable calculations under
+`research/` and focused tests under `tests/`. New examples use the existing locked dependencies
+and require no market-data download. Each notebook can be restarted independently with
+`uv run python research/execute_topics.py --topic <directory>`; successful files replace prior
+versions atomically and previews remain under ignored `research/preview/topics/`. After research
+modules and the protocol stabilize, regenerate the core metadata and main report, then run full
+artifact checks. Existing `old` and the prior published `renovation` commit preserve recovery.
+
+Completed checks: `uv run python -m pytest -q` reports **49 passed**; Ruff lint and format
+checks pass. Six new notebooks executed in fresh kernels, **34 code cells and 13 figures**,
+with every plot visually inspected. Bayesian and tail-loss calculations received additional
+review of covariance scale and objective normalization; invalid inputs and reference solutions
+are tested across return units. Plot review moved legends outside data and removed crowded
+minor ticks, followed by notebook re-execution.
+
+The main report and source/code/artifact hashes were regenerated after all research modules
+stabilized. Full artifact checks passed: all **18 topic notebooks**, their overview links,
+the main report, current source/output hashes and independent historical accounting. The
+collection now contains **19 notebooks, 106 executed code cells and 33 figures**. The original
+ETF headline is unchanged. Notebook HTML previews remain local and ignored; this review does
+not claim a live browser certification of GitHub rendering.
+
+At the user's request, the main README presents the project's own research direction without
+personal attribution to an external professor. Method citations remain in detailed research
+notes and the source register. The overview groups fifteen allocation ideas by decision type
+and keeps the three validation/estimation chapters as a separate research path.

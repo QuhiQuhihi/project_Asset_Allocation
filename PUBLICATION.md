@@ -18,7 +18,7 @@ contain old credential values. The audit records credential findings by category
 Raw vendor snapshots and private legacy data are excluded by `.gitignore`; no unrestricted
 data redistribution or commercial-use rights are asserted. Reproduction requires permitted
 access to the pinned cache; a later vendor download may differ and must not silently replace
-it. The twelve topic notebooks use original constructed examples with declared assumptions.
+it. The eighteen topic notebooks use original constructed examples with declared assumptions.
 Keep original attribution in `NOTICE` and the source register. No blanket license is inferred.
 
 ## History and release boundary

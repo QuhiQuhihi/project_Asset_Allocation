@@ -69,3 +69,36 @@ different Ledoit–Wolf paper. Seeds, sample sizes, candidate rules and scenario
 are visible in the [notebook](../topics/12-estimation-risk/study.ipynb). No additional vendor
 observations are acquired for these three new method chapters, and no constructed input is
 presented as current market data.
+
+## Additional allocation mechanisms
+
+Six new chapters use original constructed inputs to examine different policy decisions.
+Their notes link the relevant primary literature and distinguish the implemented formulation
+from related published strategies. None imports a cited paper's performance result.
+
+| Chapter | Inputs and attribution boundary |
+|---|---|
+| [Black–Litterman](../topics/13-black-litterman/README.md) | Supplied covariance, reference weights, risk aversion and noisy linear views. The reference portfolio is a constructed prior, not an estimated market equilibrium; view-error covariance is an assumption. |
+| [Expected shortfall](../topics/14-expected-shortfall/README.md) | Supplied scenario returns and probability mass, with a declared tail level and constraints. The linear program and direct tail calculation implement the cited risk measure, not a calibrated future loss distribution. |
+| [Factor risk](../topics/15-factor-risk-allocation/README.md) | Supplied loadings, factor covariance and residual covariance. Exact exposure targeting is distinguished from equal factor risk contribution; correlations and residual risk remain visible. |
+| [Liability-driven allocation](../topics/16-liability-driven-allocation/README.md) | Explicit future obligation amounts, bond maturities, capital and continuous zero-rate assumptions. The example matches value and a parallel-rate derivative, not every liability cash flow or every interest-rate scenario. |
+| [Volatility targeting](../topics/17-volatility-targeting/README.md) | A constructed return path, prior-window forecast, fixed risk target, cash accrual and trading costs. Inverse-standard-deviation targeting differs from inverse-variance volatility-managed portfolios and does not use hindsight normalization. |
+| [CPPI](../topics/18-cppi/README.md) | Explicit floor, multiplier, capital, cash rate, rebalancing delay and constructed paths. The discrete insurance mechanism is conditional on trading assumptions and can breach its floor. |
+
+For the dynamic chapters, [Moreira and Muir's author manuscript](https://law.yale.edu/sites/default/files/area/workshop/leo/leo17_moreira.pdf)
+provides the related inverse-variance policy, while [Perold and Sharpe's dynamic allocation paper](https://rpc.cfainstitute.org/research/financial-analysts-journal/1988/dynamic-strategies-for-asset-allocation)
+provides the portfolio-insurance framework. The notebooks explicitly identify which rule is
+implemented and do not claim to reproduce those papers' empirical performance.
+
+The other chapters cite [Black and Litterman (1992)](https://people.duke.edu/~charvey/Teaching/BA453_2005/blacklitterman.pdf),
+[Rockafellar and Uryasev on CVaR optimization](https://sites.math.washington.edu/~rtr/papers/rtr179-CVaR1.pdf)
+and [general loss distributions](https://sites.math.washington.edu/~rtr/papers/rtr187-CVaR2.pdf),
+[Sharpe on pension risk budgeting](https://web.stanford.edu/~wfsharpe/art/q2001/q2001.htm),
+[Israel and Ross on factor exposures](https://images.aqr.com/-/media/AQR/Documents/Insights/Trade-Publications/Measuring-Portfolio-Factor-Exposures-A-Practical-Guide.pdf),
+and [Akhtari's SOA discussion of asset–liability risk](https://www.soa.org/communities/investment-and-risk-management/newsletter-articles/2026/january/2026-01-ir-akhtari/).
+These references support the specific concepts; the scenarios and numerical comparisons
+are this project's worked examples.
+
+All numerical source inputs, units and deterministic generation settings appear in the
+notebooks. These mechanism studies do not use the maintained ETF vendor snapshot;
+the historical input manifest and the September 17, 2026 vintage remain unchanged.

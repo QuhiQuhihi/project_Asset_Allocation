@@ -27,3 +27,11 @@ validation and selection mechanics. The following empirical extensions remain un
 A VAA/DAA empirical replication needs its original eligible universes and validated signal
 definitions. The current teaching chapters distinguish the ideas without claiming that
 replication or promoting a new tactical winner.
+
+The six added allocation mechanisms create separate empirical questions. Black–Litterman needs
+dated views and a defensible record of confidence calibration; expected-shortfall allocation
+needs scenario coverage and out-of-sample tail evaluation; factor allocation needs time-stamped
+loadings and residual-risk estimates. Liability-driven work needs actual obligation schedules
+and suitable assets. Volatility targeting and CPPI need executable rebalancing assumptions,
+observed cash returns and gap scenarios. Their constructed notebooks explain these decisions;
+they do not satisfy those empirical prerequisites or become additional ETF backtest trials.

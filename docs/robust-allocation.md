@@ -4,7 +4,7 @@
 
 The research question is: **does an allocation decision remain useful after accounting for input uncertainty, information timing, strategy selection and implementation costs?** A high return on an inspected history is an observation to explain. The desired contribution is a decision rule whose economic purpose and failure conditions are clear.
 
-Marcos López de Prado's work provides part of this framework: hierarchical allocation, overlapping-label validation and explicit treatment of backtest selection. These methods complement economic reasoning and simple controls. This project implements bounded teaching examples and a separately documented historical case; it does not claim that combining named methods guarantees an investable strategy.
+The framework connects economic reasoning, portfolio construction, information boundaries and explicit treatment of strategy selection. The project develops original worked examples and a separately documented historical case to examine those decisions. Combining well-known methods does not by itself establish an investable strategy; each method needs an appropriate comparison and evidence for its intended use.
 
 ## 1. Define the economic job and the candidate family
 
@@ -12,7 +12,20 @@ Separate strategic construction from tactical decisions. A minimum-variance allo
 
 For a new empirical study, record the eligible instruments, economic roles, objective, constraints, rebalancing clock and primary comparison before evaluating candidates. Each change to universe, lookback, signal, covariance estimator, linkage, cap, risk target or cost model belongs in the research record, including abandoned variants. A narrow family can still be overfit if the researcher repeatedly changes the family after observing results.
 
-The existing nine strategy chapters expose these choices. They are illustrative mechanisms, not nine independently validated investment recommendations.
+The fifteen allocation chapters expose these choices. They are illustrative mechanisms with different objectives and controls, not a common performance contest.
+
+The expanded collection makes six additional sources of model risk concrete:
+
+| Allocation idea | The decision it changes | What a robust study must challenge |
+|---|---|---|
+| [Black–Litterman](../topics/13-black-litterman/README.md) | How a prior and investor views determine expected returns and weights | Confidence in a view, dependence among views, prior calibration, and reusing the same evidence in both prior and views |
+| [Expected shortfall](../topics/14-expected-shortfall/README.md) | How severe tail losses enter the objective | Omitted scenarios, their probabilities, tail level, return constraints and sensitivity of the optimized weights |
+| [Factor risk](../topics/15-factor-risk-allocation/README.md) | Which common economic exposures the holdings should deliver | Loading errors, correlated factors, residual risk and whether the assets can achieve the desired exposures |
+| [Liability-driven allocation](../topics/16-liability-driven-allocation/README.md) | How assets support dated obligations | Funding requirements, cash-flow uncertainty, nonparallel rate changes, convexity, inflation and liquidity |
+| [Volatility targeting](../topics/17-volatility-targeting/README.md) | How much capital belongs in a risky sleeve | Forecast delay, cash returns, exposure caps, transaction costs and risk changes faster than rebalancing |
+| [CPPI](../topics/18-cppi/README.md) | How the cushion above a floor sets risky exposure | Multiplier choice, discrete price gaps, fees, floor funding and loss of participation after the cushion disappears |
+
+These concerns determine the example's comparison. A liability hedge should be judged against its obligation; a tail-loss allocator against its declared loss distribution; an exposure overlay against its stated risk and implementation rule. None should inherit a claim of robustness merely from its name or from outperforming an unrelated benchmark.
 
 ## 2. Limit how much noisy estimates can change the decision
 
@@ -50,7 +63,7 @@ The [historical ETF case](01-methods.md) implements these accounting and compari
 
 | Component | Available evidence | Boundary |
 |---|---|---|
-| Allocation objectives and tactical rules | Nine worked strategy chapters | Constructed illustrations; not complete replications of every original strategy |
+| Allocation objectives, views, liabilities and tactical rules | Fifteen worked allocation chapters | Constructed illustrations with distinct objectives; no universal ranking or complete published-strategy replications |
 | Estimation sensitivity and finite-scenario allocation | Five rules, full bootstrap refits, shifted test distribution and independent numerical checks | Constructed world; no live allocation or empirical performance claim |
 | Purging and embargo | Explicit label intervals, split diagnostics and overlap checks | Split mechanics; no nested predictive strategy or full CPCV path assembly |
 | Search-aware evaluation | Complete synthetic library, CSCV/PBO, PSR/DSR and independent test | Assumption-dependent illustration; no selection-corrected claim about the ETF record |

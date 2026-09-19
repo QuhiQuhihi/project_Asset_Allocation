@@ -85,3 +85,22 @@ The full historical research search is not reconstructed, so an empirical deflat
 PBO claim for that study would be unsupported. All new examples are method demonstrations,
 not new evidence of allocation alpha. The [robust research design](../docs/robust-allocation.md)
 distinguishes implemented methods from the future empirical study.
+
+## Allocation-idea extension — 19 September 2026
+
+Six additional constructed mechanism studies broaden the collection to fifteen allocation
+ideas and three robustness chapters: Black–Litterman, expected shortfall, factor-risk allocation,
+liability-driven allocation, volatility targeting and CPPI. Each defines its inputs, decision
+rule, comparison, numerical checks and limitations in a dedicated note and notebook. The purpose
+is to expose distinct allocation decisions, not to select a new empirical winner. This is an
+educational scope amendment after the historical ETF results were inspected, not preregistration.
+
+Views and confidence inputs, scenario probabilities and tails, factor loadings and residual
+risk, liability cash flows and discount conventions, volatility forecasts and execution timing,
+and CPPI floors and multipliers are visible assumptions. Sensitivity examples keep unfavorable
+outcomes, including unprotected rate shifts and a discrete floor breach. Dynamic examples
+separate decision information from earned returns and account for trades and assumed cash accrual.
+
+No new observed data, ETF candidates or historical performance claims are introduced. These
+chapters do not share a universal performance ranking: their objectives and relevant controls
+differ. The original empirical primary comparison and September 17 input vintage remain fixed.

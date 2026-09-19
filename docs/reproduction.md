@@ -21,6 +21,6 @@ The first acquisition downloads only missing snapshots and checks pinned hashes.
 
 ## Topic notebooks
 
-Each topic notebook is the maintained source of its educational calculation. Run `uv run python research/execute_topics.py` from the project root to execute all twelve in fresh kernels; `--topic 01-mean-variance` selects one. Original illustrative inputs are included in the notebooks, so these examples do not download market histories. Successful notebooks replace prior files atomically; local HTML previews are saved under ignored `research/preview/topics/`.
+Each topic notebook is the maintained source of its educational calculation. Run `uv run python research/execute_topics.py` from the project root to execute all eighteen in fresh kernels; `--topic 13-black-litterman` selects one. Original illustrative inputs are included in the notebooks, so these examples do not download market histories. Successful notebooks replace prior files atomically; local HTML previews are saved under ignored `research/preview/topics/`.
 
 The primary ETF experiment retains its dated source manifest, information timing and documented statistical limitations. See [methods](01-methods.md) and [protocol](../research/PROTOCOL.md).
