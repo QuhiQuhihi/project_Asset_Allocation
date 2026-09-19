@@ -1,12 +1,22 @@
-# Asset allocation: from portfolio objectives to investment rules
+# Robust asset allocation: designing portfolios that survive estimation error
 
-Asset allocation determines which risks a portfolio owns, how strongly it owns them, and when that exposure changes. This project explores those decisions through nine approaches: mean–variance optimization, risk parity, hierarchical risk parity, Kelly growth, maximum diversification, sector momentum, vigilant allocation, defensive allocation, and sector reversal.
+A portfolio should have an economic reason to exist and remain useful when its estimated inputs are wrong. This project studies **robust asset allocation**: how to construct exposures, limit sensitivity to noisy estimates, and evaluate a strategy without mistaking repeated experimentation for investment skill.
 
-The methods answer different questions. A minimum-risk portfolio does not necessarily maximize growth; a well-diversified portfolio can still lose when correlations rise; a tactical rule can reduce exposure while paying for frequent reversals. The purpose of the collection is to understand these tradeoffs and examine whether a strategy's additional complexity earns a measurable benefit.
+The research direction draws on **Marcos López de Prado's work on financial machine learning and backtest overfitting**, alongside portfolio theory and covariance estimation. The central idea is to examine the whole decision process: the universe, estimated risks, constraints, validation periods, attempted alternatives and implementation costs. HRP, shrinkage, purging and selection diagnostics address different failure modes; none makes a strategy immune to overfitting.
 
-## Explore the strategies
+## Start with robust research design
 
-Each chapter introduces the economic idea, defines the portfolio rule, and develops a worked notebook. The topic notebooks use explicit illustrative inputs to make the mechanics visible. Risk parity and HRP also connect to the completed historical ETF comparison below.
+| Question | What the worked example lets you inspect | Read | Explore |
+|---|---|---|---|
+| **How stable are the allocations?** | Compare equal weight, sample minimum variance, shrunk capped portfolios, HRP and a finite-scenario allocation. Refit under training-sample perturbations and evaluate a constructed correlation shift. | [Estimation risk](topics/12-estimation-risk/README.md) | [Notebook](topics/12-estimation-risk/study.ipynb) |
+| **Has validation seen information it should not know?** | Track overlapping forward-return labels, purge intersecting training events and apply a stated embargo. Distinguish this research split from past-only walk-forward evaluation. | [Purged validation](topics/10-purged-validation/README.md) | [Notebook](topics/10-purged-validation/study.ipynb) |
+| **How much did searching inflate the result?** | Select among a fully recorded constructed strategy library; inspect CSCV/PBO, probabilistic Sharpe and deflated Sharpe under explicit assumptions. | [Backtest selection](topics/11-backtest-selection/README.md) | [Notebook](topics/11-backtest-selection/study.ipynb) |
+
+Start with **estimation risk** to see how research choices become portfolio weights, then follow the two validation chapters to examine the evidence supporting those choices. The [robust allocation research design](docs/robust-allocation.md) connects the examples to a complete strategy: economic objective, bounded candidates, chronological estimation, implementation costs and a genuinely future evaluation period.
+
+## Explore the allocation ideas
+
+These nine chapters supply the portfolio objectives and investment rules that robust research must evaluate. Each introduces the economic mechanism and links to a worked notebook with explicit illustrative inputs. Read them as candidates to understand and challenge, rather than a menu of backtested winners.
 
 | Topic | Research question and contents | Read | Explore |
 |---|---|---|---|
@@ -20,50 +30,18 @@ Each chapter introduces the economic idea, defines the portfolio rule, and devel
 | **8. Defensive allocation** | Can a separate warning universe guide the risk budget? Distinguish canary signals from asset selection and defensive holdings. | [Research note](topics/08-defensive-allocation/README.md) | [Notebook](topics/08-defensive-allocation/study.ipynb) |
 | **9. Sector reversal** | When might recent losers recover? Contrast a short-horizon contrarian ranking with momentum and consider turnover and persistent losses. | [Research note](topics/09-sector-reversal/README.md) | [Notebook](topics/09-sector-reversal/study.ipynb) |
 
-For a first pass, compare **mean–variance**, **risk parity**, and **maximum diversification**: each changes the objective while holding the idea of a portfolio fixed. Then read **HRP** for a different use of dependence, **Kelly** for a different definition of success, and the four tactical chapters for decisions that change with market signals.
+The first five chapters examine how objectives and dependence estimates determine weights. The four tactical chapters examine when signals should change asset selection or risk exposure. In each case ask which estimated quantity drives the decision, how that decision changes under plausible errors, and which simple allocation supplies a fair comparison.
 
-## How the allocation research is designed
+## A historical case for applying the discipline
 
-### Separate portfolio construction from market timing
+The [ETF research report](study.ipynb) compares equal weight, inverse volatility, ERC and HRP on **SPY, IEMG, TLT, GLD and SHY**, with a separate defensive-momentum adaptation and SPY/AGG 60/40 context. The pinned adjusted-price vintage spans **2 July 2018–17 September 2026**. Monthly decisions use earlier information, weights drift between trades, and costs apply to both buys and sells.
 
-The construction study compares equal weight, inverse volatility, equal risk contribution (ERC), and HRP on the same eligible assets. It asks whether estimating individual risks and correlations improves the portfolio beyond a simple equal allocation. ERC balances estimated risk contributions; HRP divides risk across a hierarchy of correlated assets. Neither requires a forecast of each asset's expected return.
+This case illustrates why exposure controls matter: a portfolio can reduce volatility by owning more short-duration bonds or cash. Prior-risk-scaled equal weight provides a more informative construction comparison than a headline return alone. The [findings and sensitivities](docs/02-results.md) retain uncertainty, adverse periods and unfavorable outcomes; [methods](docs/01-methods.md) explain the accounting and cash assumptions.
 
-Tactical allocation asks a separate question: whether recent price information should change which assets are held or the amount of capital exposed to risk. The completed historical study includes one bounded defensive-momentum adaptation. The VAA and DAA chapters explain their respective breadth and canary ideas, but their worked examples are not full replications or additional winning backtests.
-
-### Give every asset an economic role
-
-| Asset | Exposure | Why it matters to the comparison |
-|---|---|---|
-| SPY | US equities | Equity growth and drawdown exposure |
-| IEMG | Emerging-market equities | A second equity region with distinct risks, but substantial shared equity exposure |
-| TLT | Long US Treasury bonds | Duration exposure whose diversification depends on the inflation/rate environment |
-| GLD | Gold | A different source of market risk with time-varying correlations |
-| SHY | Short US Treasury bonds | Low-volatility defensive exposure that still bears interest-rate risk |
-
-The input sample runs from **2 July 2018 through 17 September 2026**. AGG supplies a separate **60% SPY / 40% AGG** reference. That portfolio provides familiar context; the same-universe equal-weight portfolio supplies the direct construction control. ETF selection is fixed and retrospective, and SHY is not interchangeable with risk-free cash.
-
-### Ask whether lower risk comes from better diversification or less exposure
-
-A strategy can look attractive by concentrating in short-duration bonds. For each estimated allocation, the study therefore adds an equal-weight control scaled to its **forecast** risk using information available before trading. The scaling is capped at 100%; unused capital remains in cash. This controls an important exposure difference while allowing realized risks to differ.
-
-Risk estimates use the preceding **252 daily returns**. Portfolios rebalance monthly, with information ending before the execution close; new holdings first earn the next session's return. Existing weights drift between trades. Costs are **5 basis points per bought or sold dollar**, including entry, and cash earns an explicitly assumed zero return. These assumptions matter especially when a control holds substantial cash.
-
-The common portfolio evaluation begins in August 2020. The main incremental comparison uses January 2025 onward, accompanied by dependence-aware uncertainty, lookback and covariance sensitivity, an additional execution delay, and a fixed range of trading costs. These are retrospective comparisons, not an untouched live test. [Read the full research design](docs/01-methods.md).
-
-## What the completed ETF study shows
-
-<!-- RESEARCH_RESULT:START -->
-In January 2025–17 September 2026, HRP minus its prior-risk-scaled equal-weight control has a net annualized mean/volatility difference of **+0.649**, with paired 95% block interval **[-0.649, +1.954]**. This does not establish incremental risk-adjusted value under this universe, zero cash interest and cost assumptions.
-<!-- RESEARCH_RESULT:END -->
-
-![Incremental risk-adjusted comparison](research/figures/incremental.png)
-
-The interpretation depends on the holdings as well as the headline statistic. HRP allocates heavily to SHY; lower volatility alone is therefore not evidence that its hierarchy predicts markets better. The risk-scaled comparison and sensitivity results help separate that exposure choice from the contribution of portfolio construction. The full report shows net wealth, drawdowns, weights, turnover, costs and uncertainty, including unfavorable results.
-
-**Continue to the [research findings](docs/02-results.md) or the [complete executed study](study.ipynb).** The worked topic notebooks explain mechanisms; this report supplies the historical evidence for the bounded primary experiment.
+The history has already been inspected. It is **retrospective evidence**, and its intervals do not correct for the full history of research choices. The new constructed robustness examples are separate experiments; they do not turn this ETF record into an untouched holdout or provide an empirical deflated Sharpe ratio for it.
 
 ## Research materials
 
-[Experimental protocol](research/PROTOCOL.md) · [Data and literature](research/SOURCES.md) · [Further research questions](research/RESEARCH_AGENDA.md) · [Reproduce the calculations](docs/reproduction.md)
+[Robust allocation design](docs/robust-allocation.md) · [Dated ETF protocol](research/PROTOCOL.md) · [Sources and attribution](research/SOURCES.md) · [Next research questions](research/RESEARCH_AGENDA.md) · [Reproduce the calculations](docs/reproduction.md)
 
-The original notebooks are preserved on `old`. These renewed chapters replace their public teaching path without inheriting unverified performance claims. Data vintage, cash assumptions, surviving-ETF selection and execution limits are documented with the study. See the [original-method audit](research/AUDIT.md) and [publication notes](PUBLICATION.md) for provenance and historical material.
+The original notebooks are preserved on `old`. The [original-method audit](research/AUDIT.md) and [publication notes](PUBLICATION.md) document provenance and the treatment of historical material. The research aim is a defensible allocation decision with visible limits, rather than the strongest result available from a reused sample.

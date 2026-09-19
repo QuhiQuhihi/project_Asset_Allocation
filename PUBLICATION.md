@@ -3,7 +3,9 @@
 The maintained tree contains research code, narrative, executed study, generated aggregate
 results and original figures. Original notebooks, helper code and data are recoverable from
 `old` and ignored `research/private-legacy/`; these historical copies are not release-cleared.
-No Git history rewrite, remote push, visibility change or live blog publication was performed.
+The user authorized upload to the existing GitHub repository. The maintained work is on
+`renovation`, with original research on `old`; no history rewrite, default-branch replacement,
+visibility change or live blog publication is part of this update.
 
 ## Current-file review
 
@@ -16,7 +18,7 @@ contain old credential values. The audit records credential findings by category
 Raw vendor snapshots and private legacy data are excluded by `.gitignore`; no unrestricted
 data redistribution or commercial-use rights are asserted. Reproduction requires permitted
 access to the pinned cache; a later vendor download may differ and must not silently replace
-it. Numerical fixtures in the FICC project are explicitly original illustrative assumptions.
+it. The twelve topic notebooks use original constructed examples with declared assumptions.
 Keep original attribution in `NOTICE` and the source register. No blanket license is inferred.
 
 ## History and release boundary
@@ -30,5 +32,6 @@ of every historical object.
 
 CI installs the locked Linux environment, runs focused synthetic/known-answer tests and public
 artifact checks. It does not download licensed histories, certify provider data quality or
-validate live execution. Local complete reproduction commands are in the README. Review the
-rendered notebook and figures before any separately authorized publication.
+validate live execution. Complete reproduction commands are on the secondary
+[reproduction page](docs/reproduction.md). Codex and agent instructions, environments, private
+recovery material and vendor snapshots remain excluded from the maintained public files.

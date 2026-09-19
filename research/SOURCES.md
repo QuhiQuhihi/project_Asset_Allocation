@@ -30,7 +30,7 @@ computed before this refresh. This is not an independent before/after strategy e
 ## Methods and attribution
 
 - [SciPy linkage](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html): distinguishes condensed distances from observation arrays; verified against the installed API and independent two-asset calculation.
-- [Ledoit–Wolf implementation](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.LedoitWolf.html): identity-target shrinkage used only in the prespecified sensitivity.
+- [Ledoit–Wolf implementation](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.LedoitWolf.html): identity-target shrinkage used in the ETF sensitivity and the separate constructed estimation-risk example.
 - [Keller and Keuning (2017), VAA](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3002624): source of the breadth-momentum idea. The maintained five-ETF defensive rule is an adaptation, not the paper's universe or a replication of its performance.
 - López de Prado (2016), *Building Diversified Portfolios that Outperform Out of Sample*, Journal of Portfolio Management 42(4): HRP attribution. The legacy implementation was checked against condensed-distance semantics and known small cases; no source-paper performance is reproduced.
 
@@ -51,3 +51,21 @@ or unverified historical outputs. Additional methodological references: [Markowi
 and [Choueifaty on maximum diversification](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4063676).
 The source abstracts and official documentation support attribution; the notebook calculations
 are original examples and do not reproduce the cited papers' empirical performance claims.
+
+## Robust allocation extension
+
+The [research design](../docs/robust-allocation.md) links the original HRP paper, the author's
+financial ML book, [Bailey et al. on CSCV/PBO](https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf)
+and [Bailey and López de Prado's original 2014 DSR paper](https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf).
+The worked examples implement stated equations on original constructed inputs. The author-hosted
+papers support methodological attribution, not claims of empirical allocation success here.
+The PSR/DSR example states IID assumptions and the distinction between a supplied independent
+trial count and the unknown effective number of attempts in a real research history.
+
+The finite-scenario allocation is an original educational minimax-variance example, using
+training-only covariance transformations, a declared cap and the official SciPy SLSQP solver.
+Its covariance-shrinkage target is identity, not the constant-correlation target from a
+different Ledoit–Wolf paper. Seeds, sample sizes, candidate rules and scenario definitions
+are visible in the [notebook](../topics/12-estimation-risk/study.ipynb). No additional vendor
+observations are acquired for these three new method chapters, and no constructed input is
+presented as current market data.

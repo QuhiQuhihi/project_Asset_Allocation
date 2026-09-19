@@ -64,3 +64,24 @@ with `uv run python research/build_notebook.py` after calculations. Raw rights r
 ## Data amendment before evaluation
 
 The user authorized refreshing inputs during implementation, before primary results were computed. On 19 September 2026 KST, download through the last completed US close (17 September; exclusive end 18 September). September is partial. Original protocol is retained in `protocol_versions/initial_20260919.md`; initial manifest and raw snapshots remain available. This expands the late segment by 12 sessions and may revise overlapping adjusted prices. Source revision diagnostics are saved; no initial performance result is claimed.
+
+## Research-direction amendment after the historical evaluation
+
+The project now leads with robust asset allocation and research selection risk, at the user's
+request. This amendment follows inspection of the ETF results; it is not a preregistration and
+does not replace the historical primary comparison above. The README introduces the research
+questions and chapter collection; numerical ETF findings remain generated in the results note.
+
+Three separate constructed chapters cover label purging/embargo, CSCV/PBO and the original
+PSR/DSR formulation, and training-only allocation under estimation uncertainty. The allocation
+example fixes five rules, a 35% cap, 126 training observations, 252 independent shifted-world
+test observations, two explicit training-derived stress transformations and 120 bootstrap
+refits. Seeds and all model inputs appear in its notebook. Its stress set is an assumption,
+not a statistical coverage region; no candidate is promoted from the observed comparison.
+
+The validation chapters specify their own complete illustrative inputs and trial library.
+They do not add an empirical selection correction to the previously inspected ETF paths.
+The full historical research search is not reconstructed, so an empirical deflated Sharpe or
+PBO claim for that study would be unsupported. All new examples are method demonstrations,
+not new evidence of allocation alpha. The [robust research design](../docs/robust-allocation.md)
+distinguishes implemented methods from the future empirical study.

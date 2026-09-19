@@ -1,3 +1,29 @@
-# Next experiment — explicitly not run
+# Next research questions
 
-The HRP-minus-risk-scaled-EQ ratio interval includes zero despite a positive point estimate. Next, collect an untouched later period using the unchanged rules, add observed cash yields, and investigate whether the large SHY allocation explains the result. Required inputs: permitted snapshots with vintage history, instrument distributions, executable spread/size assumptions and an ex-ante universe. Do not choose the best lookback from this study's sensitivity table. A separate VAA/DAA replication requires the original universes and validated definitions; it is not claimed done here.
+The new [robust allocation chapters](../docs/robust-allocation.md) demonstrate estimation,
+validation and selection mechanics. The following empirical extensions remain unrun.
+
+1. **Freeze a bounded allocation family for future evaluation.** Record an economically
+   justified universe, primary loss/comparator, training window, cap, stress set and all
+   attempted alternatives before collecting a later uninspected sample. Keep the historical
+   HRP specification separate; do not choose its best lookback from the sensitivity table.
+2. **Separate stable decisions from low-risk concentration.** Apply joint block refits to
+   rolling training windows, compare sample covariance with shrinkage and constrained rules,
+   and report weight dispersion, concentration and risk-matched incremental outcomes. Include
+   regime stresses beyond the finite scenarios illustrated in the teaching notebook.
+3. **Make economic implementation realistic.** Pin observed cash yields, point-in-time
+   instrument eligibility, distribution records and permitted vintage histories. Account for
+   executable spreads, size and rebalancing capacity. Investigate how SHY exposure and cash
+   accrual explain the existing ETF comparison.
+4. **If adding predictive ML, validate its entire selection process.** Define label intervals
+   and feature availability; fit preprocessing and tune parameters within training only.
+   Assemble nested or combinatorial purged evaluation where justified, then check chronological
+   deployment. The current split-mechanics notebook does not claim this pipeline exists.
+5. **Preserve the full search record.** Retain failed trials and common-date return paths.
+   Assess sensitivity to dependent trials and serially dependent observations before applying
+   selection diagnostics to real allocation strategies. The historical record is incomplete
+   for a defensible empirical DSR/PBO claim; synthetic examples do not fill that gap.
+
+A VAA/DAA empirical replication needs its original eligible universes and validated signal
+definitions. The current teaching chapters distinguish the ideas without claiming that
+replication or promoting a new tactical winner.

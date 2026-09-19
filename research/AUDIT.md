@@ -28,3 +28,18 @@ They do not reuse the archived historical curves or add post-selected strategies
 ETF contest. Risk parity and HRP connect the teaching examples to the maintained empirical study.
 The main README introduces the research breadth and design; reproduction details moved to
 `docs/reproduction.md`. Original-source disposition above describes the preserved legacy files.
+
+## Robust allocation direction
+
+The collection now leads with input uncertainty, information boundaries and research selection,
+following the user's requested emphasis on robust allocation and López de Prado's methods.
+Three new constructed chapters extend the nine strategy mechanisms. The empirical HRP case
+remains available with its original primary comparison and limitations; its headline no longer
+determines the root README's structure. Regeneration writes numerical findings to the dedicated
+results note, preserving the editorial research map.
+
+Independent review of the new finite-scenario optimizer found that absolute input-validation
+tolerances could admit an invalid covariance in extremely small return units. Validation now
+normalizes covariance magnitude before symmetry/semidefiniteness checks; tests reject the same
+invalid matrix across scales. Known analytic and exhaustive-grid solutions validate the actual
+optimization. This repair does not alter the historical ETF strategy engine.

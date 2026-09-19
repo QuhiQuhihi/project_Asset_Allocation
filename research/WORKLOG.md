@@ -49,3 +49,36 @@ signal roles without claiming full published-strategy replication.
 `uv run python research/check_artifacts.py`, Ruff check and format check all passed. The
 primary calculation and its headline finding are unchanged. New topic notes and notebook
 Markdown links are included in the public artifact check.
+
+## Robust allocation revision — 19 September 2026
+
+The user requested a robust allocation direction inspired by Marcos López de Prado's work.
+The root README now introduces estimation stability, information leakage and backtest selection,
+then links all nine original strategy chapters. The historical ETF case remains a supporting
+record. Its generated numerical paragraph no longer rewrites the README.
+
+Added three original constructed notebooks: label purging/embargo with training-only preprocessing
+and held-out raw-data perturbations; a complete 128-candidate IID null search with CSCV/PBO and
+original-2014 PSR/DSR; and five fixed allocation rules with covariance shrinkage, concentration
+caps, finite-scenario minimax variance and 120 complete bootstrap refits. The separate research
+design states which methods are implemented and which empirical extensions remain unrun.
+
+Verification completed in the locked Linux environment:
+
+- `uv run python -m pytest -q`: **25 passed**, including 17 new focused validation/optimization tests.
+- Ruff lint and format checks pass across `research` and `tests`.
+- All three new chapters executed in fresh kernels: **12 code cells, 5 figures**, zero errors.
+  Their figures were visually inspected and their HTML previews contain the expected tables and
+  embedded plots. An independent review corrected covariance-validation tolerances for tiny
+  return units; the final estimation notebook was rerun after that correction.
+- `research/run_study.py` and `research/build_notebook.py` regenerated the empirical report and
+  provenance. The ETF calculation and numerical conclusion remain unchanged.
+- `research/check_artifacts.py` passed public links, all **12 topic notebooks**, the main report,
+  source/code/output hashes and independent historical accounting checks. Across the collection:
+  **13 notebooks, 72 executed code cells, 20 figures**.
+
+Recovery uses the existing pipeline and `research/execute_topics.py --topic <directory>`.
+Successful notebooks replace prior files atomically; previews remain under ignored
+`research/preview/`. These examples require no new vendor data or dependencies. The existing
+September 17 adjusted-price vintage remains the separate historical input. No empirical DSR/PBO
+claim, full nested predictive allocation model or completed future holdout is asserted.

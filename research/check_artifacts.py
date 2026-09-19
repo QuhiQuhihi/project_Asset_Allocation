@@ -73,8 +73,8 @@ def public_checks():
     if not any("image/png" in o.get("data", {}) for c in code for o in c.get("outputs", [])):
         raise ValueError("No notebook figures")
     topics = sorted((ROOT / "topics").glob("*/study.ipynb"))
-    if len(topics) != 9:
-        raise ValueError("Expected all nine allocation topic notebooks")
+    if len(topics) != 12:
+        raise ValueError("Expected nine allocation and three robustness topic notebooks")
     for path in topics:
         topic = nbformat.read(path, as_version=4)
         nbformat.validate(topic)
