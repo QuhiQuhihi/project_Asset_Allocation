@@ -37,3 +37,17 @@ computed before this refresh. This is not an independent before/after strategy e
 Contribution: correct the accounting and distance-input defects, isolate prior-risk exposure
 controls, preserve unfavorable sensitivities and quantify incremental uncertainty. Source
 attribution does not establish a novel allocation algorithm.
+
+## Strategy reading collection
+
+The topic notebooks contain their own original constructed covariance, return, probability or
+signal inputs; these are teaching exercises, not newly acquired observations. Topic READMEs link
+method-specific primary references and clearly separate illustrations from the completed ETF
+study. The new notes restore all nine original subject areas without restoring vendor exports
+or unverified historical outputs. Additional methodological references: [Markowitz's Nobel lecture](https://www.nobelprize.org/uploads/2018/06/markowitz-lecture.pdf),
+[Maillard, Roncalli and Teïletche on ERC](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1271972),
+[López de Prado on HRP](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2708678),
+[Kelly's original article](https://onlinelibrary.wiley.com/doi/abs/10.1002/j.1538-7305.1956.tb03809.x),
+and [Choueifaty on maximum diversification](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4063676).
+The source abstracts and official documentation support attribution; the notebook calculations
+are original examples and do not reproduce the cited papers' empirical performance claims.

@@ -52,7 +52,8 @@ def public_checks():
     markdown = [
         ROOT / "README.md",
         ROOT / "PUBLICATION.md",
-        *list((ROOT / "docs").glob("*.md")),
+        *list((ROOT / "docs").rglob("*.md")),
+        *list((ROOT / "topics").rglob("*.md")),
         *list((ROOT / "research").glob("*.md")),
     ]
     for p in markdown:
@@ -71,8 +72,31 @@ def public_checks():
         raise ValueError("Notebook has errors")
     if not any("image/png" in o.get("data", {}) for c in code for o in c.get("outputs", [])):
         raise ValueError("No notebook figures")
+    topics = sorted((ROOT / "topics").glob("*/study.ipynb"))
+    if len(topics) != 9:
+        raise ValueError("Expected all nine allocation topic notebooks")
+    for path in topics:
+        topic = nbformat.read(path, as_version=4)
+        nbformat.validate(topic)
+        cells = [cell for cell in topic.cells if cell.cell_type == "code"]
+        if not cells or any(cell.execution_count is None for cell in cells):
+            raise ValueError("Unexecuted topic notebook: " + str(path.relative_to(ROOT)))
+        outputs = [output for cell in cells for output in cell.get("outputs", [])]
+        if any(output.output_type == "error" for output in outputs):
+            raise ValueError("Topic notebook error: " + str(path.relative_to(ROOT)))
+        if not any("image/png" in output.get("data", {}) for output in outputs):
+            raise ValueError("Missing topic figure: " + str(path.relative_to(ROOT)))
+        for cell in topic.cells:
+            if cell.cell_type != "markdown":
+                continue
+            for link in re.findall(r"\]\(([^)]+)\)", cell.source):
+                if re.match(r"https?://|mailto:|#", link):
+                    continue
+                target = link.split("#")[0]
+                if target and not (path.parent / target).exists():
+                    raise ValueError(f"Broken notebook link in {path.parent.name}: {target}")
     print(
-        f"Public checks: {len(code)} executed cells, links/figures valid; no raw-history download"
+        f"Public checks: main report and {len(topics)} executed topic notebooks; links/figures valid"
     )
 
 

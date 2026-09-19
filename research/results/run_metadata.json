@@ -1,5 +1,5 @@
 {
-  "run_utc": "2026-09-18T16:57:21.491177+00:00",
+  "run_utc": "2026-09-19T03:39:36.845562+00:00",
   "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
   "platform": "Linux",
   "settings": {
@@ -17,10 +17,11 @@
     "research/acquire.py": "cf6f57aa489e739d20491ed62e8dc33d3e154fdf0de6a5086223ca52bc2422a0",
     "research/allocation.py": "7ae07ff8af3418b193e8cb697b1f31249119bf64dc1ad8974a4604cc90c41e56",
     "research/build_notebook.py": "bfbce90218888e7358dde9e1fafc072217fb4c469d924b916c73e25f9191fd49",
-    "research/check_artifacts.py": "6ec5dc9f68e25fdf171f956b1d7cd34c53e8b4a15994c25f2631751c46feab4c",
+    "research/check_artifacts.py": "318ab37c14b6f7e31ddb18477891a9f2ed5c925f58e8dd876177b201b242c05a",
     "research/common.py": "f6a87ab1fe76838155011e55e7a964e6912d7f0025a1b862eff96538a4ac8f02",
+    "research/execute_topics.py": "705c222ca97329db914cd6ef01f20752f626b32682ba9236eed1ce51ac7958e4",
     "research/refresh_sources.py": "47d7b645c915feb2954b56aa220b2f42eaa0a93038d0e60661c3b2c6cee1c857",
-    "research/run_study.py": "54f32bad422fa8ec19b4875a0ce7122b4d442db36e1469a83393dcbc355bb5a2"
+    "research/run_study.py": "ca58845b0590113e54e933b02ddf929d4278be2a175de4ce9d459d46fd2e9eb1"
   },
   "artifacts": {
     "research/figures/drawdown.png": "42aad8928eda604d2abb8e3a56baa0c2e170906bd768b38df1dcb79d5d317aae",

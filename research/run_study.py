@@ -204,8 +204,13 @@ def main():
     (ROOT / "docs/02-results.md").write_text(findings)
     readme = ROOT / "README.md"
     if readme.exists():
-        parts = readme.read_text().split("\n\n", 2)
-        readme.write_text(parts[0] + "\n\n" + findings.split("\n\n")[1] + "\n\n" + parts[2])
+        text = readme.read_text()
+        start, end = "<!-- RESEARCH_RESULT:START -->", "<!-- RESEARCH_RESULT:END -->"
+        if start not in text or end not in text:
+            raise ValueError("README is missing its research result markers")
+        before, rest = text.split(start, 1)
+        _, after = rest.split(end, 1)
+        readme.write_text(before + start + "\n" + findings.split("\n\n")[1] + "\n" + end + after)
     (RESULTS / "headline.json").write_text(
         __import__("json").dumps(
             {

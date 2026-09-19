@@ -28,3 +28,24 @@ The maintained Git tree omits raw vendor histories, ignored recovery material, e
 caches. Historical credential/rights boundaries remain in [publication review](../PUBLICATION.md).
 
 Final Git review: original `old` reference verified; maintained Markdown links resolve within the staged tree. Tracked evidence hashes match staged bytes, and raw/recovery/environment paths are absent. `.gitattributes` preserves Linux source line endings and exact hashed CSV serializer bytes. Staged whitespace checks pass.
+
+## Research reading collection
+
+The README now leads with portfolio objectives, all nine original strategy topics, their
+economic differences, the ETF universe and the comparison design. Each topic has its own
+research note and notebook; operational commands live in `docs/reproduction.md`. A bounded
+result marker prevents research regeneration from replacing the editorial introduction.
+
+All nine teaching notebooks executed in fresh kernels: 48 code cells, 11 figures,
+zero cell errors. Inputs are explicit constructed illustrations, except references to the
+separately completed historical study. Known-answer and timing assertions run inside the
+examples. All topic figures were visually inspected. The five optimization/risk chapters had
+an additional independent mathematical review; equality-constraint wording and Kelly payoff
+units were clarified. Tactical chapters distinguish momentum/reversal horizons and VAA/DAA
+signal roles without claiming full published-strategy replication.
+
+`uv run python research/execute_topics.py --topic <directory>` executed every chapter;
+`uv run python research/build_notebook.py` regenerated the main report and provenance;
+`uv run python research/check_artifacts.py`, Ruff check and format check all passed. The
+primary calculation and its headline finding are unchanged. New topic notes and notebook
+Markdown links are included in the public artifact check.

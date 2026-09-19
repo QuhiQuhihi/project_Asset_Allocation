@@ -18,3 +18,13 @@ Disposition: risk parity and HRP are reimplemented with one accounting engine. E
 Revised primary question: does HRP improve net return/risk relative to equal weight and a lagged risk-scaled equal-weight control? IV and ERC are prespecified supporting comparisons. Current-vintage ETF adjusted closes make a bounded historical comparison feasible; universe selection, provider revisions, closing execution and zero cash accrual remain important limitations.
 
 Recovery: `git show old:<path>` or ignored `research/private-legacy/<path>`. Original history is intentionally preserved, not publication-cleared.
+
+## Research collection amendment
+
+The original nine subjects now each have a reader-facing note and an executed topic notebook
+under `topics/`. Mean–variance, Kelly and maximum-diversification examples use constructed
+inputs and analytical checks; the tactical chapters illustrate their signal and exposure rules.
+They do not reuse the archived historical curves or add post-selected strategies to the primary
+ETF contest. Risk parity and HRP connect the teaching examples to the maintained empirical study.
+The main README introduces the research breadth and design; reproduction details moved to
+`docs/reproduction.md`. Original-source disposition above describes the preserved legacy files.

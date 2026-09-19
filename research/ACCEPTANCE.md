@@ -19,3 +19,12 @@
 All completed checks refer to local execution. Provider data accuracy, point-in-time vintages,
 actual transaction execution and unrestricted redistribution are not certified. See the
 [work log](WORKLOG.md) for commands, recovery and the visual/HTML inspection boundary.
+
+## Topic-navigation extension
+
+All original subject areas now lead from the root README to a dedicated research note and
+an executed notebook. Nine teaching notebooks contain 48 executed code cells and 11
+figures. They cover objective/constraint calculations and explicit tactical scenarios rather
+than carrying forward unverified legacy performance. Operational instructions moved to a
+secondary [reproduction page](../docs/reproduction.md). Research design and principal findings
+remain visible before those instructions.
